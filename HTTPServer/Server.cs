@@ -86,7 +86,7 @@ namespace HTTPServer
 				if (!request.ParseRequest())
 				{
 					content = LoadDefaultPage(Configuration.BadRequestDefaultPageName);
-					return new Response(StatusCode.BadRequest, "BadRequest.html", content, "");
+					return new Response(StatusCode.BadRequest, "text/html", content, "");
 				}
 				//TODO: map the relativeURI in request to get the physical path of the resource.
 				string physicalPath = Configuration.RootPath + "/" + request.relativeURI;
@@ -98,7 +98,7 @@ namespace HTTPServer
 				if (!File.Exists(physicalPath))
 				{
 					content = LoadDefaultPage(Configuration.BadRequestDefaultPageName);
-					return new Response(StatusCode.BadRequest, "BadRequest.html", content, "");
+					return new Response(StatusCode.BadRequest, "text/html", content, "");
 				}
 				//TODO: read the physical file
 				else
@@ -149,11 +149,17 @@ namespace HTTPServer
             try
             {
 				// TODO: using the filepath paramter read the redirection rules from file 
+                // then fill Configuration.RedirectionRules dictionary
+
 				FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.Read);
 				StreamReader sr = new StreamReader(fs);
-				string f = sr.ReadToEnd();
-
-				// then fill Configuration.RedirectionRules dictionary
+				string f = "";
+                
+                while((f = sr.ReadLine()) != null)
+                {
+                    string [] SplitedFile = f.Split(',');
+                    Configuration.RedirectionRules.Add(SplitedFile[0], SplitedFile[1]);
+                }
 			}
 
 			catch (Exception ex)

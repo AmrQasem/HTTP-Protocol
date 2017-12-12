@@ -7,3 +7,7 @@ E:\F C I S\Forth Year\Http Protocol\HTTP-Protocol\HTTPServer\bin\Debug\HTTPServe
 E:\F C I S\Forth Year\Http Protocol\HTTP-Protocol\HTTPServer\obj\x86\Debug\HTTPServer.csprojResolveAssemblyReference.cache
 E:\F C I S\Forth Year\Http Protocol\HTTP-Protocol\HTTPServer\obj\x86\Debug\HTTPServer.exe
 E:\F C I S\Forth Year\Http Protocol\HTTP-Protocol\HTTPServer\obj\x86\Debug\HTTPServer.pdb
+F:\Http Protocol\HTTP-Protocol\HTTPServer\obj\x86\Debug\HTTPServer.exe
+F:\Http Protocol\HTTP-Protocol\HTTPServer\obj\x86\Debug\HTTPServer.pdb
+H:\Http Protocol\HTTP-Protocol\HTTPServer\obj\x86\Debug\HTTPServer.exe
+H:\Http Protocol\HTTP-Protocol\HTTPServer\obj\x86\Debug\HTTPServer.pdb
