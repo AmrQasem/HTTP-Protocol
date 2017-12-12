@@ -1,0 +1,7 @@
+google,aboutus.html
+facebook,aboutus2.html
+twitter,BadRequest.html
+yallakora,InternalError.html
+main,main.html
+notfound,NotFound.html
+superkora,Redirect.html

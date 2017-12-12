@@ -11,3 +11,8 @@ F:\Http Protocol\HTTP-Protocol\HTTPServer\obj\x86\Debug\HTTPServer.exe
 F:\Http Protocol\HTTP-Protocol\HTTPServer\obj\x86\Debug\HTTPServer.pdb
 H:\Http Protocol\HTTP-Protocol\HTTPServer\obj\x86\Debug\HTTPServer.exe
 H:\Http Protocol\HTTP-Protocol\HTTPServer\obj\x86\Debug\HTTPServer.pdb
+G:\Http Protocol\HTTP-Protocol\HTTPServer\obj\x86\Debug\HTTPServer.exe
+G:\Http Protocol\HTTP-Protocol\HTTPServer\obj\x86\Debug\HTTPServer.pdb
+G:\Http Protocol\HTTP-Protocol\HTTPServer\bin\Debug\HTTPServer.exe
+G:\Http Protocol\HTTP-Protocol\HTTPServer\bin\Debug\HTTPServer.pdb
+G:\Http Protocol\HTTP-Protocol\HTTPServer\obj\x86\Debug\HTTPServer.csprojResolveAssemblyReference.cache

@@ -30,11 +30,27 @@ namespace HTTPServer
         List<string> headerLines = new List<string>();
         public Response(StatusCode code, string contentType, string content, string redirectoinPath)
         {
+
             throw new NotImplementedException();
             // TODO: Add headlines (Content-Type, Content-Length,Date, [location if there is redirection])
+            // TODO: Create the response string
 
+            string statusline = GetStatusLine(code);
+            headerLines.Add(contentType);
+            headerLines.Add(content.Length.ToString());
+            headerLines.Add(DateTime.Now.ToString());
+            headerLines.Add(redirectoinPath);
+            if (redirectoinPath != null)
+            {
 
-            // TODO: Create the request string
+                responseString = statusline + "contentType:" + headerLines[0] + "contentLength:" + headerLines[1] + "Date:" + headerLines[2] + "redirectoinPath:" + headerLines[3] + content + "";
+
+            }
+            else
+            {
+                responseString = statusline + "contentType:" + headerLines[0] + "contentLength:" + headerLines[1] + "Date:" + headerLines[2] + content + "";
+            }
+
 
         }
 
@@ -42,6 +58,26 @@ namespace HTTPServer
         {
             // TODO: Create the response status line and return it
             string statusLine = string.Empty;
+            if (StatusCode.OK == code)
+            {
+                statusLine = Configuration.ServerHTTPVersion + code + "OK";
+            }
+            else if (StatusCode.BadRequest == code)
+            {
+                statusLine = Configuration.ServerHTTPVersion + code + "BadRequest";
+            }
+            else if (StatusCode.NotFound == code)
+            {
+                statusLine = Configuration.ServerHTTPVersion + code + "NotFound";
+            }
+            else if (StatusCode.InternalServerError == code)
+            {
+                statusLine = Configuration.ServerHTTPVersion + code + "InternalServerError";
+            }
+            else if (StatusCode.Redirect == code)
+            {
+                statusLine = Configuration.ServerHTTPVersion + code + "Redirect";
+            }
 
             return statusLine;
         }

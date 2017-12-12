@@ -1,0 +1,5 @@
+aboutus2.html,aboutus2.html
+aboutus.html,aboutus2.html
+main.html,main.html
+notfound.html,NotFound.html
+superkora.html,Redirect.html
